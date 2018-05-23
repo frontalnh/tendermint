@@ -6,7 +6,7 @@ if [ "$CIRCLE_BRANCH" == "" ]; then
 	echo 1
 fi
 
-yes | git fetch origin develop
+yes yes | git fetch origin develop
 
 # check for changes in the `rpc/core` directory
 did_rpc_change=$(git diff --name-status $CIRCLE_BRANCH develop | grep rpc/core)
