@@ -91,7 +91,6 @@ jobs:
           command: |
             set -ex
             export PATH="$GOBIN:$PATH"
-            echo "yes" | git fetch origin develop
             make build-slate
 
   lint:
